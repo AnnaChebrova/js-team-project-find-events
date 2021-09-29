@@ -1,12 +1,14 @@
 {
-  "name": "js-team-project",
+  "name": "js-team-project-find-events",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://kylory.github.io/js-team-project",
+  "homepage": "https://AnnaChebrova.github.io/js-team-project-find-events",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /js-team-project/"
+    "build": "parcel build src/*.html",
+    "predeploy": "npm run build -- --public-url /js-team-project-find-events/",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "devDependencies": {
+    "gh-pages": "^3.2.3",
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
